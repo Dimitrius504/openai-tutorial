@@ -1,0 +1,143 @@
+<main>
+
+  <!-- separate two section  section 1 start-->
+  <div class="container text-center">
+
+    <div class="row">
+      <div class="col image1">
+        <img src="/image/image2.png" width="110px" />
+        <h1>Get Your Personalized <br />Diet Plan Easily</h1>
+
+        <!-- start form  -->
+        <!-- BIOLOGICAL GENDER -->
+        <form class="row g-3" method="post" action="/" id="user-info">
+          <div class="row g-3">
+            <div class="col-sm">
+              <p>Biological gender:</p>
+            </div>
+            <div class="col b-space">
+              <input
+                type="checkbox"
+                class="btn-check"
+                autocomplete="off"
+                id="AMAB"
+                name="AMAB"
+                value="AMAB"
+              />
+              <label class="btn btn1" for="AMAB"><i
+                  class="bi bi-gender-male"
+                ></i>AMAB</label>
+            </div>
+            <div class="col b-space">
+              <input
+                type="checkbox"
+                class="btn-check"
+                checked
+                autocomplete="off"
+                id="AFAB"
+                name="AFAB"
+                value="AFAB"
+              />
+              <label class="btn btn1" for="AFAB"><i
+                  class="bi bi-gender-female"
+                ></i>AFAB</label>
+            </div>
+          </div>
+
+          <!-- NAME HEIGHT WEIGH -->
+          <div class="row g-3 type">
+            <!-- NAME -->
+            <fieldset class="col-sm" id="username">
+              <label for="Name" class="form-label">Your Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Name"
+                name="Name"
+                id="Name"
+                required
+              />
+            </fieldset>
+
+            <!-- HEIGHT -->
+            <fieldset class="col-sm" id="weight">
+              <label for="height" class="form-label">Height:</label>
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Height"
+                name="height"
+                id="height"
+                required
+              />
+            </fieldset>
+
+            <!-- WEIGH -->
+            <fieldset class="col-sm" id="weight">
+              <label for="weight" class="form-label">Weight:</label>
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Weight"
+                name="weight"
+                id="weight"
+                required
+              />
+            </fieldset>
+          </div>
+
+          <!-- DROPDOWN -->
+          <div class="mb-3">
+            <label for="splitOption" class="form-label">What is your Ideal
+              Split?
+            </label>
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              name="splitOption"
+            >
+              <option selected></option>
+              <option value="1">Upper Body</option>
+              <option value="2">Lower Body</option>
+              <option value="3">Rest or Active Recovery</option>
+            </select>
+          </div>
+
+          <button
+            onclick="toggle(this)"
+            type="submit"
+            value="submit"
+            id="submit"
+            class="btn btn-primary btn-lg btn2"
+          >Get Diet YOur Workout Plan!</button>
+        </form>
+        <!-- Form Fin -->
+
+      </div>
+
+      <!-- RIght Image -->
+      <div class="col image2 mobile">
+        {{#if message}}
+          <aside id="return-message">
+            <h1>{{Name}} Workout Plan</h1>
+            <div class="container" id="return-message">
+              <article>
+                <p>{{message}}</p>
+              </article>
+            </div>
+          </aside>
+        {{else}}
+          <image
+            src="/image/image1.png"
+            width="100%"
+            class="img"
+            id="picture"
+          ></image>
+        {{/if}}
+
+      </div>
+
+    </div>
+  </div>
+
+</main>
